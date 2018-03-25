@@ -3,16 +3,10 @@
   "name": "Chat Summarizer",
   "description": " No need to read 200 messages to know what your friends' plans are for this friday.",
   "version": "0.1",
-  "browser_action": {
-    "default_popup": "pages/main.html",
-    "default_icon": "img/logo.png"
-  },
   "content_scripts": [
     {
-      "matches": [
-        "messenger.com"
-      ],
-      "js": ["libs/jquery-3.3.1.min.js", "js/content.js"]
+      "matches": [ "*://messenger.com/*" ],
+      "js": [ "libs/jquery-3.3.1.min.js", "js/content.js" ]
     }
   ]  
 }
